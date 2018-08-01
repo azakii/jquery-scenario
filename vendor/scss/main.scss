@@ -1,5 +1,5 @@
 /*
-    Author: azaki
+Author: azaki
 */
 body {
     direction: rtl;
@@ -29,7 +29,7 @@ ul.list-group {
                     line-height: 28px;
                     margin-top: 6px;
                 }
-         }
+            }
         }
     }
     &::before {
@@ -43,14 +43,14 @@ ul.list-group {
     }
     &:nth-child(3) {
         &::before {
-        content: '';
-        width: 1px;
-        height: 100px;
-        position: absolute;
-        right: -3px;
-        top:20px;
-        background: black;
-    }
+            content: '';
+            width: 1px;
+            height: 100px;
+            position: absolute;
+            right: -3px;
+            top:20px;
+            background: black;
+        }
     }
 }
 a {
@@ -109,8 +109,8 @@ li .fa-circle {
 #CreatedNewSectionBlock {
     display: none;
     .row {
-            border: 1px #ccc solid;
-        }
+        border: 1px #ccc solid;
+    }
 }
 footer {
     margin-top: 9rem;

@@ -16,10 +16,10 @@ function goBack() {
 }
 
 function addSectionBtn() {    
-        $('#addSectionOrQuiz').hide();
-        $('#CreatedNewSectionBlock').hide();
-        $('#lectureDone').hide();    
-        $("#addSectionBlock").fadeIn(500);
+    $('#addSectionOrQuiz').hide();
+    $('#CreatedNewSectionBlock').hide();
+    $('#lectureDone').hide();    
+    $("#addSectionBlock").fadeIn(500);
 }
 
 //CreatedNewSection
