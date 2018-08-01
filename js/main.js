@@ -7,14 +7,6 @@ $( document ).ready(function() {
         $('#addSectionOrQuiz').hide();        
         $("#addSectionBlock").fadeIn(500);
     });
-    
-    $("input").click(function () {
-        $.cookie('myCookie', cook.val(), {
-        expires: 365
-        });
-    });
-    var cook = $(".addblock").val($.cookie("myCookie"))
-
 });
 
 //cancel btn
@@ -47,6 +39,10 @@ function addLecture() {
 function submitLecture() {    
     $("#addLectureBlock").hide();
     $('#lectureDone').fadeIn(500);        
+    $('#addQuiz').hide();        
+    $("#addOptions").show();
+    $("#addSec").show();
+
 }
 
 //cancel lecture
@@ -64,5 +60,18 @@ function addlectureDescribtion() {
 //save descrtibtion
 function saveDescribtion() {    
     $("#adddescribtion").hide();
-    $('#lectureDone').fadeIn(500);        
+    $('#lectureDone').fadeIn(500); 
+    $('#addQuiz').hide();     
+    $("#addOptions").show();
+    $("#addSec").show();
+}
+
+//save addQuiz
+function addQuiz() {    
+    $("#CreatedNewSectionBlock").hide();
+    $("#addSectionOrQuiz").hide();    
+    $('#lectureDone').fadeIn(500);
+    $('#addQuiz').show();
+    $("#addOptions").hide();
+    $("#addSec").hide();
 }

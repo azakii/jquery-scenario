@@ -24,7 +24,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Test</a>
+        <a class="navbar-brand" href="#">onePage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -104,7 +104,7 @@
                         <button type="button" class="btn btn-light" id="addSectionBtn" >add section</button>
                     </div>
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-light" id="addSectionBtn">add Quiz</button>
+                        <button type="button" class="btn btn-light" id="addSectionBtn" onclick="addQuiz();">add Quiz</button>
                     </div>
 
                     <div class="col-md-6">
@@ -134,9 +134,9 @@
                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter a learning objective">
                   </div>
 
-                  <div class="text-left">
+                  <div class="text-right">
                     <button type="submit" class="btn-primary"  onclick="CreatedNewSection()">Submit</button>
-                    <a href="#/" onclick="goBack()">cancel</a>
+                    <a href="#/" class="cancelBtn" onclick="goBack()">cancel</a>
                       </div>
                 </form>
             </div>  
@@ -144,7 +144,7 @@
              <div class="addblock" id="CreatedNewSectionBlock">
                  <div class="row">
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-light" id="addSectionBtn">add Quiz</button>
+                        <button type="button" class="btn btn-light" id="addSectionBtn" onclick="addQuiz();">add Quiz</button>
                     </div>
 
                     <div class="col-md-6">
@@ -176,9 +176,9 @@
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                           </div>
 
-                          <div class="text-left">
+                          <div class="text-right">
                             <button type="submit" class="btn-primary"  onclick="submitLecture();">Submit</button>
-                            <a href="#/" onclick="lectureCancel();">cancel</a>
+                            <a href="#/" class="cancelBtn" onclick="lectureCancel();">cancel</a>
                               </div>
                         </form>
 
@@ -188,11 +188,11 @@
                  <p>section 1 introduction</p>
                  <div class="sectionDone">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <i class="fa fa-check-circle" aria-hidden="true"></i>
     lecture 1: introduction 
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-8 text-right">
                             <button type="button" class="btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>
  add video</button>
                             <button type="button" class="btn-secondary"  onclick="addlectureDescribtion();"><i class="fa fa-plus" aria-hidden="true"></i>
@@ -202,9 +202,52 @@
                         </div>
                     </div>
                  </div>
-                    <div class="row">
+                 
+                 <!--/add addQuiz-->
+             <div class="addblock" id="addQuiz">
+                 <h3>Add Multiple choice</h3>
+                 <hr  />
+                 <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Answer the questions</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+ <div class="form-group">
+    <label for="exampleFormControlInput1">Question</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+ <div class="form-group">
+    <label for="exampleFormControlInput1">Question</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+
+  <div class="form-group floatright">
+    <label for="exampleFormControlSelect2">Example multiple select</label>
+    <div class="row">
+      <i class="fa fa-check-circle" aria-hidden="true"></i><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="row">
+    <i class="fa fa-circle-thin" aria-hidden="true"></i><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="row">
+    <i class="fa fa-circle-thin" aria-hidden="true"></i><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="row">
+    <i class="fa fa-circle-thin" aria-hidden="true"></i><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+   </div>      
+  </div>
+ </form>
+                 <div class="text-right">                     
+                    <button type="button" class="btn-light" id="addSectionBtn"  onclick="addQuiz();">add Quiz</button>  
+                </div>
+                 
+
+             </div>
+                 <!--/add add section-->
+                 
+                 <div class="row" id="addOptions">
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-light" id="addSectionBtn">add Quiz</button>
+                        <button type="button" class="btn btn-light" id="addSectionBtn" onclick="addQuiz();">add Quiz</button>
                     </div>
 
                     <div class="col-md-6">
@@ -221,7 +264,7 @@
                     </div>  
                      
                 </div>
-                 <div class="col-md-12">                     
+                 <div class="col-md-12" id="addSec">                     
                     <button type="button" class="btn btn-light" id="addSectionBtn" onclick="addSectionBtn();">add section</button>  
                 </div>
                  
@@ -233,12 +276,14 @@
                 <div class="form-group">
                     <textarea class="form-control" rows="3"></textarea>
                 </div>
-                <div class="text-left">
+                <div class="text-right">
                 <button type="submit" class="btn-primary"  onclick="saveDescribtion();">save</button>
                 </div>
 
               </div>
                 
+                
+                 
             </div>
           
           </div>
@@ -252,7 +297,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container-fluid">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Ahmed Zaki 2018</p>
       </div>
       <!-- /.container -->
     </footer>

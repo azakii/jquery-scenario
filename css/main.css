@@ -3,7 +3,7 @@
 */
 body {
   direction: rtl;
-  padding: 80px;
+  padding: 120px 0 0;
   background: #f2f2f2;
 }
 ul.list-group {
@@ -55,7 +55,7 @@ li .fa-circle {
   float: right;
   margin-right: -30px;
   line-height: 28px;
-  margin-top: 6px;
+  margin-top: 0;
 }
 .fa.no {
   background: #f2f2f2;
@@ -66,7 +66,7 @@ li .fa-circle {
   float: right;
   margin-right: -38px;
   line-height: 28px;
-  margin-top: 6px;
+  margin-top: 0;
   border: 1px black solid;
   color: black;
   font-family: tahoma;
@@ -108,5 +108,25 @@ li .fa-circle {
   border: 1px #ccc solid;
 }
 footer {
-  margin-top: 4rem;
+  margin-top: 9rem;
+}
+.floatright i {
+  float: right;
+  margin-left: 10px;
+}
+.floatright textarea {
+  float: right;
+  width: 93%;
+  margin-bottom: 1rem;
+}
+.sectionDone {
+  width: 100%;
+  border: 2px #000 solid;
+  padding: 10px;
+}
+#addQuiz {
+  margin: 2rem 0 2rem;
+}
+.cancelBtn {
+  margin-right: 1rem;
 }
