@@ -1,0 +1,117 @@
+/*
+    Author: azaki
+*/
+body {
+    direction: rtl;
+    padding: 80px;
+    background: #f2f2f2
+}
+ul.list-group {
+    margin-bottom: 2rem;
+    display: inline-block;
+    position: relative;
+    li {
+        list-style: none;
+        .list-group-item {
+            background: transparent;
+            border: 0;
+        }
+        a {
+            &.done {
+                .fa-check {
+                    background: white;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    text-align: center;
+                    float: right;
+                    margin-right: -38px;
+                    line-height: 28px;
+                    margin-top: 6px;
+                }
+         }
+        }
+    }
+    &::before {
+        content: '';
+        width: 1px;
+        height: 150px;
+        position: absolute;
+        right: -3px;
+        top:20px;
+        background: black;
+    }
+    &:nth-child(3) {
+        &::before {
+        content: '';
+        width: 1px;
+        height: 100px;
+        position: absolute;
+        right: -3px;
+        top:20px;
+        background: black;
+    }
+    }
+}
+a {
+    color: #333;
+    font-weight: 500;
+}        
+
+li .fa-circle {
+    float: right;
+    margin-right: -30px;
+    line-height: 28px;
+    margin-top: 6px;
+}
+.fa.no {
+    background: #f2f2f2;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    float: right;
+    margin-right: -38px;
+    line-height: 28px;
+    margin-top: 6px;
+    border: 1px black solid;
+    color: black;
+    font-family: tahoma
+}
+
+.whiteBg {
+    background: white;
+    padding: 30px;
+    h1 {
+        color: black;
+        border-bottom: 1px #ccc solid;
+        padding: 10px 10px 20px; 
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+    .btn {
+        width:100%;
+        border: 1px #ccc solid;
+        margin: 10px;
+    }
+}
+.addblock {
+    background: #f2f2f2;
+    padding: 50px;
+    margin: 5rem 0 2rem;
+    form {
+        width:100%;
+    }
+} 
+#addSectionBlock, #addLectureBlock, #lectureDone, #adddescribtion {
+    display: none;
+}
+#CreatedNewSectionBlock {
+    display: none;
+    .row {
+            border: 1px #ccc solid;
+        }
+}
+footer {
+    margin-top: 4rem;
+}

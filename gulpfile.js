@@ -1,48 +1,26 @@
 var gulp = require('gulp');
+var less = require('gulp-less');
 var browserSync = require('browser-sync').create();
-var pkg = require('./package.json');
-
-// Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
-
-  // Bootstrap
-  gulp.src([
-      './node_modules/bootstrap/dist/**/*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-    ])
-    .pipe(gulp.dest('./vendor/bootstrap'))
-
-  // jQuery
-  gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery'))
-
-})
-
-// Default task
-gulp.task('default', ['vendor']);
-
-// Configure the browserSync task
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
 
 gulp.task('less', function(){
   return gulp.src('vendor/scss/*.scss')
     .pipe(less()) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('css'))
 });
-
-
-// Dev task
-gulp.task('dev', ['browserSync'], function() {
-  gulp.watch('./css/*.css', browserSync.reload);
-  gulp.watch('./*.html', browserSync.reload);
+gulp.task('run', function() {
+    browserSync.init({
+        proxy: "http://localhost/jquery-scenario",
+    });
 });
+gulp.task('watch', ['run', 'less'], function (){
+  gulp.watch('*.html', browserSync.reload);
+  gulp.watch('vendor/scss/*.scss', ['less']);
+  // Reloads the browser whenever HTML or JS files change
+  gulp.watch('css/*.css', browserSync.reload);
+  gulp.watch('js/*.js', browserSync.reload);
+});
+
+gulp.task('hello', function() {
+  console.log('');
+});
+gulp.task('default', ['hello','watch', 'less', 'run']);

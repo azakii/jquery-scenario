@@ -1,15 +1,112 @@
-/*!
- * Start Bootstrap - Shop Item (https://startbootstrap.com/template-overviews/shop-item)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
- */
-
+/*
+    Author: azaki
+*/
 body {
-  padding-top: 54px;
+  direction: rtl;
+  padding: 80px;
+  background: #f2f2f2;
 }
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
+ul.list-group {
+  margin-bottom: 2rem;
+  display: inline-block;
+  position: relative;
+}
+ul.list-group li {
+  list-style: none;
+}
+ul.list-group li .list-group-item {
+  background: transparent;
+  border: 0;
+}
+ul.list-group li a.done .fa-check {
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  float: right;
+  margin-right: -38px;
+  line-height: 28px;
+  margin-top: 6px;
+}
+ul.list-group::before {
+  content: '';
+  width: 1px;
+  height: 150px;
+  position: absolute;
+  right: -3px;
+  top: 20px;
+  background: black;
+}
+ul.list-group:nth-child(3)::before {
+  content: '';
+  width: 1px;
+  height: 100px;
+  position: absolute;
+  right: -3px;
+  top: 20px;
+  background: black;
+}
+a {
+  color: #333;
+  font-weight: 500;
+}
+li .fa-circle {
+  float: right;
+  margin-right: -30px;
+  line-height: 28px;
+  margin-top: 6px;
+}
+.fa.no {
+  background: #f2f2f2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  float: right;
+  margin-right: -38px;
+  line-height: 28px;
+  margin-top: 6px;
+  border: 1px black solid;
+  color: black;
+  font-family: tahoma;
+}
+.whiteBg {
+  background: white;
+  padding: 30px;
+}
+.whiteBg h1 {
+  color: black;
+  border-bottom: 1px #ccc solid;
+  padding: 10px 10px 20px;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+.whiteBg .btn {
+  width: 100%;
+  border: 1px #ccc solid;
+  margin: 10px;
+}
+.addblock {
+  background: #f2f2f2;
+  padding: 50px;
+  margin: 5rem 0 2rem;
+}
+.addblock form {
+  width: 100%;
+}
+#addSectionBlock,
+#addLectureBlock,
+#lectureDone,
+#adddescribtion {
+  display: none;
+}
+#CreatedNewSectionBlock {
+  display: none;
+}
+#CreatedNewSectionBlock .row {
+  border: 1px #ccc solid;
+}
+footer {
+  margin-top: 4rem;
 }
